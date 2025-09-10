@@ -16,7 +16,7 @@ data class Article(
                 title = title,
                 content = content,
                 author = author,
-                createdAt = null
+                createdAt = LocalDateTime.now()
             )
         }
     }

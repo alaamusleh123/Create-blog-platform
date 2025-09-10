@@ -10,6 +10,7 @@ class CreateArticleUseCase(
     private val articleRepository: ArticleRepository
 ) {
     fun execute(command: CreateArticleCommand): Article {
-
+        val article = Article.createNew(command.title, command.content, command.author)
+        return articleRepository.save(article)
     }
 }
