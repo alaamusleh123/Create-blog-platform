@@ -20,4 +20,8 @@ class ArticleRepositoryImpl(
     override fun findByAuther(author: String): List<Article?> {
         return articleDao.findByAuthor(author).map { it?.toDomain() }
     }
+
+    override fun findAll(): List<Article> {
+        return articleDao.findAll().map { it.toDomain() }
+    }
 }
