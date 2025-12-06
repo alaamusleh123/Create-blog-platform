@@ -24,4 +24,8 @@ class ArticleRepositoryImpl(
     override fun findAll(): List<Article> {
         return articleDao.findAll().map { it.toDomain() }
     }
+
+    override fun findById(id: Long): Article? {
+        return articleDao.findById(id).orElse(null)?.toDomain()
+    }
 }

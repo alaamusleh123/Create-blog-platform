@@ -31,6 +31,7 @@ class ArticleController(
         title = this.title,
         content = this.content,
         author = this.author,
-        createdAt = this.createdAt
+        createdAt = this.createdAt,
+        updatedAt = this.updatedAt
     )
 }

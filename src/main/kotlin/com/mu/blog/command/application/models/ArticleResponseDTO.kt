@@ -7,5 +7,6 @@ data class ArticleResponseDTO(
     val title: String,
     val content: String,
     val author: String,
-    val createdAt: LocalDateTime?
+    val createdAt: LocalDateTime?,
+    val updatedAt: LocalDateTime?
 )

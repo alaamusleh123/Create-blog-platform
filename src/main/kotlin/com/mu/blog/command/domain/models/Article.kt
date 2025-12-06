@@ -8,6 +8,7 @@ data class Article(
     val content: String,
     val author: String,
     val createdAt: LocalDateTime?,
+    val updatedAt: LocalDateTime? = null
 ) {
     companion object {
         fun createNew(title: String, content: String, author: String): Article {
@@ -16,8 +17,17 @@ data class Article(
                 title = title,
                 content = content,
                 author = author,
-                createdAt = LocalDateTime.now()
+                createdAt = LocalDateTime.now(),
+                updatedAt = null
             )
         }
+    }
+
+    fun update(title: String, content: String): Article {
+        return this.copy(
+            title = title,
+            content = content,
+            updatedAt = LocalDateTime.now()
+        )
     }
 }

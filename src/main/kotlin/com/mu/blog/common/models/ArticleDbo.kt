@@ -23,5 +23,8 @@ data class ArticleDbo(
 
     @Column(name = "created_at", nullable = false, updatable = false)
     @CreatedDate
-    var createdAt: LocalDateTime = LocalDateTime.now()
+    var createdAt: LocalDateTime = LocalDateTime.now(),
+
+    @Column(name = "updated_at")
+    var updatedAt: LocalDateTime? = null
 )

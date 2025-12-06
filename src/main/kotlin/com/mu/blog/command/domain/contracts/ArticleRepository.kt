@@ -6,4 +6,5 @@ interface ArticleRepository {
     fun save(article: Article): Article
     fun findByAuther(author: String): List<Article?>
     fun findAll(): List<Article>
+    fun findById(id: Long): Article?
 }
