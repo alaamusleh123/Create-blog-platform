@@ -8,7 +8,8 @@ fun Article.toDbo() = ArticleDbo(
     title = this.title,
     author = this.author,
     content = this.content,
-    createdAt = this.createdAt!!
+    createdAt = this.createdAt!!,
+    updatedAt = this.updatedAt
 )
 
 fun ArticleDbo.toDomain(): Article =
@@ -17,5 +18,6 @@ fun ArticleDbo.toDomain(): Article =
         title = this.title,
         content = this.content,
         author = this.author,
-        createdAt = this.createdAt
+        createdAt = this.createdAt,
+        updatedAt = this.updatedAt
     )
